@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="about">
+    <!-- Existing Cosmic Background Effects (Retained) -->
     <div class="stars"></div>
     <div class="nebula"></div>
     
+    <!-- Existing Header (Retained) -->
     <header class="holo-header">
         <nav class="nav-grid">
             <div class="logo">Quantum Portfolio</div>
@@ -23,16 +25,29 @@
         </nav>
     </header>
 
+    <!-- Updated Main Content with AI Bot (Retained and Enhanced) -->
     <main>
         <section class="about">
             <h2 class="section-title">About Us</h2>
             <div class="about-content">
                 <p>We are pioneers in quantum computing, AI, and space technology, driving innovation to shape the future of humanity. Our mission is to solve the universe's greatest challenges through cutting-edge science and engineering.</p>
                 <p>With a team of visionary engineers and scientists, we push the boundaries of what's possible, from interplanetary travel to neural interfaces, inspired by the likes of Elon Musk and xAI.</p>
+                <!-- AI Bot Icon (New Feature) -->
+                <img src="images/ai-bot.png" class="ai-bot" id="aiBot" alt="AI Bot">
             </div>
         </section>
+        <!-- Chat Modal (New Feature) -->
+        <div class="chat-modal" id="chatModal">
+            <button id="closeModal">Close</button>
+            <form id="chatForm">
+                <input type="text" placeholder="Ask a question about the portfolio" id="chatInput">
+                <button type="submit">Send</button>
+            </form>
+            <div id="chatResponses"></div>
+        </div>
     </main>
 
+    <!-- Updated Footer with Social Media Icons (Retained and Enhanced) -->
     <footer>
         <div class="footer-content">
             <p>© 2025 Quantum Portfolio | Powered by xAI Technology</p>
@@ -40,6 +55,12 @@
                 <a href="https://github.com" target="_blank">GitHub</a>
                 <a href="https://x.com" target="_blank">X</a>
                 <a href="https://neuralink.com" target="_blank">Neuralink</a>
+            </div>
+            <div class="social-media">
+                <a href="https://linkedin.com" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+                <a href="https://github.com" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
+                <a href="https://discord.com" target="_blank"><img src="images/discord-icon.png" alt="Discord"></a>
+                <a href="https://youtube.com" target="_blank"><img src="images/youtube-icon.png" alt="YouTube"></a>
             </div>
         </div>
     </footer>
