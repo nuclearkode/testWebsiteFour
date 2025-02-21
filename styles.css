@@ -88,7 +88,7 @@ nav a {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s;
-    text-shadow: 0 0 5px rgba(0,0,0,0.5); /* Improved contrast */
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
 nav a:hover, nav a.active {
@@ -187,6 +187,11 @@ nav a:hover, nav a.active {
     border: none;
     margin: 5px;
     cursor: pointer;
+    transition: background 0.3s;
+}
+
+.project-filters button:hover {
+    background: #ff00cc;
 }
 
 .project-grid {
@@ -322,6 +327,12 @@ nav a:hover, nav a.active {
     margin-top: 20px;
     text-align: center;
     color: #fff;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 
 /* Footer */

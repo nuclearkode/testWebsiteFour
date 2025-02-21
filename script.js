@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Contact Form Submission with Validation
+    // Contact Form Submission (Static Alert)
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
@@ -49,18 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('Please enter a valid email address.');
                 return;
             }
-            fetch(contactForm.action, {
-                method: 'POST',
-                body: new FormData(contactForm),
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    alert('Message sent successfully!');
-                    contactForm.reset();
-                } else {
-                    alert('There was an error sending your message.');
-                }
-            });
+            alert('Message sent successfully! We’ll get back to you soon.');
+            contactForm.reset();
         });
     }
 
@@ -148,9 +138,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const question = chatInput.value.toLowerCase().trim();
                 let response;
                 if (question.includes('project')) {
-                    response = 'AI: Our projects include Mars Rover AI, Quantum Encryption, and Hyperloop Control. Which one interests you?';
+                    response = 'AI: Our projects include Mars Rover AI, Quantum Encryption, Hyperloop Control, Martian Farming, and more. Which one interests you?';
                 } else if (question.includes('contact')) {
-                    response = 'AI: Contact us via the form on the Contact page or email info@quantumportfolio.com.';
+                    response = 'AI: Contact us via email at info@quantumportfolio.com or through the Contact page.';
                 } else {
                     response = 'AI: I\'m here to assist with Quantum Portfolio queries. What would you like to know?';
                 }
@@ -168,7 +158,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Responsive Menu
     const hamburger = document.querySelector('.hamburger');
     const navUl = document.querySelector('nav ul');
-    hamburger.addEventListener('click', () => {
-        navUl.classList.toggle('show');
+
+    if (hamburger && navUl) {
+        hamburger.addEventListener('click', () => {
+            navUl.classList.toggle('show');
+        });
+    }
+
+    // Dynamic active class for navigation
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('nav a').forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
     });
 });

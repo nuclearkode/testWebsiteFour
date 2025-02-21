@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore Quantum Portfolio's projects in AI, quantum computing, and space technology.">
+  <meta name="description" content="Explore Quantum Portfolio's projects in AI, quantum computing, space technology, agriculture, and vehicles.">
   <title>Quantum Portfolio | Projects</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
       <div class="hamburger" aria-label="Menu Toggle">☰</div>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="projects.html" class="active" aria-current="page">Projects</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -30,36 +30,95 @@
   <!-- Main Content -->
   <main>
     <section class="projects">
-      <h2 class="section-title">Neural Network Projects</h2>
+      <h2 class="section-title">Our Innovative Projects</h2>
       <div class="project-filters">
         <button data-filter="all">All</button>
         <button data-filter="ai">AI</button>
         <button data-filter="security">Security</button>
         <button data-filter="transport">Transport</button>
+        <button data-filter="agriculture">Agriculture</button>
+        <button data-filter="vehicle">Vehicle</button>
       </div>
       <div class="project-grid">
+        <!-- AI Projects -->
         <div class="project-card" data-category="ai">
-          <img src="images/project1.jpg" class="project-image" alt="Mars Rover AI" loading="lazy">
+          <img src="images/project1.jpg" class="project-image" alt="Mars Rover AI" loading="lazy" onerror="this.src='images/placeholder.jpg';">
           <div class="card-inner">
             <h3>Mars Rover AI</h3>
             <p>Autonomous navigation system for extraterrestrial exploration</p>
             <a href="#" class="project-link" data-project="marsRover">Learn More</a>
           </div>
         </div>
+        <div class="project-card" data-category="ai">
+          <img src="images/project4.jpg" class="project-image" alt="AI Weather Prediction" loading="lazy" onerror="this.src='images/placeholder.jpg';">
+          <div class="card-inner">
+            <h3>AI Weather Prediction</h3>
+            <p>Advanced AI model for predicting weather patterns on Mars</p>
+            <a href="#" class="project-link" data-project="aiWeather">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Security Projects -->
         <div class="project-card" data-category="security">
-          <img src="images/project2.jpg" class="project-image" alt="Quantum Encryption" loading="lazy">
+          <img src="images/project2.jpg" class="project-image" alt="Quantum Encryption" loading="lazy" onerror="this.src='images/placeholder.jpg';">
           <div class="card-inner">
             <h3>Quantum Encryption</h3>
             <p>Unbreakable security for interplanetary communication</p>
             <a href="#" class="project-link" data-project="quantumEncryption">Learn More</a>
           </div>
         </div>
+        <div class="project-card" data-category="security">
+          <img src="images/project5.jpg" class="project-image" alt="Cybersecurity AI" loading="lazy" onerror="this.src='images/placeholder.jpg';">
+          <div class="card-inner">
+            <h3>Cybersecurity AI</h3>
+            <p>AI-driven threat detection for space missions</p>
+            <a href="#" class="project-link" data-project="cybersecurityAI">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Transport Projects -->
         <div class="project-card" data-category="transport">
-          <img src="images/project3.jpg" class="project-image" alt="Hyperloop Control" loading="lazy">
+          <img src="images/project3.jpg" class="project-image" alt="Hyperloop Control" loading="lazy" onerror="this.src='images/placeholder.jpg';">
           <div class="card-inner">
             <h3>Hyperloop Control</h3>
             <p>AI-driven transportation optimization system</p>
             <a href="#" class="project-link" data-project="hyperloopControl">Learn More</a>
+          </div>
+        </div>
+        <div class="project-card" data-category="transport">
+          <img src="images/project6.jpg" class="project-image" alt="Space Elevator" loading="lazy" onerror="this.src='images/placeholder.jpg';">
+          <div class="card-inner">
+            <h3>Space Elevator</h3>
+            <p>Quantum-engineered transport system for space access</p>
+            <a href="#" class="project-link" data-project="spaceElevator">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Agriculture Projects -->
+        <div class="project-card" data-category="agriculture">
+          <img src="images/project7.jpg" class="project-image" alt="Martian Farming" loading="lazy" onerror="this.src='images/placeholder.jpg';">
+          <div class="card-inner">
+            <h3>Martian Farming</h3>
+            <p>Sustainable agriculture solutions for Mars colonization</p>
+            <a href="#" class="project-link" data-project="martianFarming">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Vehicle Projects -->
+        <div class="project-card" data-category="vehicle">
+          <img src="images/project8.jpg" class="project-image" alt="Lunar Rover" loading="lazy" onerror="this.src='images/placeholder.jpg';">
+          <div class="card-inner">
+            <h3>Lunar Rover</h3>
+            <p>Autonomous vehicle for lunar exploration</p>
+            <a href="#" class="project-link" data-project="lunarRover">Learn More</a>
+          </div>
+        </div>
+        <div class="project-card" data-category="vehicle">
+          <img src="images/project9.jpg" class="project-image" alt="Aerial Drone Network" loading="lazy" onerror="this.src='images/placeholder.jpg';">
+          <div class="card-inner">
+            <h3>Aerial Drone Network</h3>
+            <p>Drone-based logistics for planetary surfaces</p>
+            <a href="#" class="project-link" data-project="droneNetwork">Learn More</a>
           </div>
         </div>
       </div>
@@ -72,14 +131,44 @@
     <p>An autonomous navigation system designed for Mars rovers, utilizing advanced AI to analyze terrain and optimize routes in real-time.</p>
     <button class="close-modal">Close</button>
   </div>
+  <div class="project-modal" id="aiWeatherModal">
+    <h3>AI Weather Prediction</h3>
+    <p>Advanced AI model for predicting weather patterns on Mars, improving mission planning and safety.</p>
+    <button class="close-modal">Close</button>
+  </div>
   <div class="project-modal" id="quantumEncryptionModal">
     <h3>Quantum Encryption</h3>
     <p>A quantum-based encryption protocol ensuring secure communication across interplanetary distances, resistant to all known decryption methods.</p>
     <button class="close-modal">Close</button>
   </div>
+  <div class="project-modal" id="cybersecurityAIModal">
+    <h3>Cybersecurity AI</h3>
+    <p>AI-driven threat detection for space missions, protecting critical systems from cyber attacks.</p>
+    <button class="close-modal">Close</button>
+  </div>
   <div class="project-modal" id="hyperloopControlModal">
     <h3>Hyperloop Control</h3>
     <p>An AI-driven system for managing Hyperloop transportation, optimizing speed, safety, and energy efficiency through real-time data analysis.</p>
+    <button class="close-modal">Close</button>
+  </div>
+  <div class="project-modal" id="spaceElevatorModal">
+    <h3>Space Elevator</h3>
+    <p>Quantum-engineered transport system for efficient and cost-effective access to space, leveraging advanced materials and AI control.</p>
+    <button class="close-modal">Close</button>
+  </div>
+  <div class="project-modal" id="martianFarmingModal">
+    <h3>Martian Farming</h3>
+    <p>Sustainable agriculture solutions for Mars colonization, using hydroponics and AI to grow food in harsh environments.</p>
+    <button class="close-modal">Close</button>
+  </div>
+  <div class="project-modal" id="lunarRoverModal">
+    <h3>Lunar Rover</h3>
+    <p>Autonomous vehicle for lunar exploration, equipped with advanced sensors and AI for navigation and sample collection.</p>
+    <button class="close-modal">Close</button>
+  </div>
+  <div class="project-modal" id="droneNetworkModal">
+    <h3>Aerial Drone Network</h3>
+    <p>Drone-based logistics for planetary surfaces, enabling efficient transport and monitoring using AI coordination.</p>
     <button class="close-modal">Close</button>
   </div>
   
@@ -88,16 +177,7 @@
     <div class="footer-content">
       <p>© 2025 Quantum Portfolio | Powered by xAI Technology</p>
       <div class="social-media">
-        <a href="https://linkedin.com" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
-        <a href="https://github.com" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
-        <a href="https://x.com" target="_blank"><img src="images/x-icon.png" alt="X"></a>
-        <a href="https://discord.com" target="_blank"><img src="images/discord-icon.png" alt="Discord"></a>
-        <a href="https://youtube.com" target="_blank"><img src="images/youtube-icon.png" alt="YouTube"></a>
-        <a href="https://neuralink.com" target="_blank"><img src="images/neuralink-icon.png" alt="Neuralink"></a>
-      </div>
-    </div>
-  </footer>
-  
-  <script src="script.js"></script>
-</body>
-</html>
+        <a href="https://linkedin.com" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn" onerror="this.style.display='none';"></a>
+        <a href="https://github.com" target="_blank"><img src="images/github-icon.png" alt="GitHub" onerror="this.style.display='none';"></a>
+        <a href="https://x.com" target="_blank"><img src="images/x-icon.png" alt="X" onerror="this.style.display='none';"></a>
+        <a href="https://discord.com" target="
