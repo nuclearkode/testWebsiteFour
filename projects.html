@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Quantum Portfolio's projects in AI, quantum computing, and space technology.">
   <title>Quantum Portfolio | Projects</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
@@ -16,6 +17,7 @@
   <header class="holo-header">
     <nav class="nav-grid" aria-label="Main Navigation">
       <div class="logo">Quantum Portfolio</div>
+      <div class="hamburger" aria-label="Menu Toggle">☰</div>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html" class="active">Projects</a></li>
@@ -29,7 +31,12 @@
   <main>
     <section class="projects">
       <h2 class="section-title">Neural Network Projects</h2>
-      <!-- (Optional: Add filtering buttons here) -->
+      <div class="project-filters">
+        <button data-filter="all">All</button>
+        <button data-filter="ai">AI</button>
+        <button data-filter="security">Security</button>
+        <button data-filter="transport">Transport</button>
+      </div>
       <div class="project-grid">
         <div class="project-card" data-category="ai">
           <img src="images/project1.jpg" class="project-image" alt="Mars Rover AI" loading="lazy">
@@ -59,20 +66,34 @@
     </section>
   </main>
   
+  <!-- Project Modals -->
+  <div class="project-modal" id="marsRoverModal">
+    <h3>Mars Rover AI</h3>
+    <p>An autonomous navigation system designed for Mars rovers, utilizing advanced AI to analyze terrain and optimize routes in real-time.</p>
+    <button class="close-modal">Close</button>
+  </div>
+  <div class="project-modal" id="quantumEncryptionModal">
+    <h3>Quantum Encryption</h3>
+    <p>A quantum-based encryption protocol ensuring secure communication across interplanetary distances, resistant to all known decryption methods.</p>
+    <button class="close-modal">Close</button>
+  </div>
+  <div class="project-modal" id="hyperloopControlModal">
+    <h3>Hyperloop Control</h3>
+    <p>An AI-driven system for managing Hyperloop transportation, optimizing speed, safety, and energy efficiency through real-time data analysis.</p>
+    <button class="close-modal">Close</button>
+  </div>
+  
   <!-- Footer -->
   <footer>
     <div class="footer-content">
       <p>© 2025 Quantum Portfolio | Powered by xAI Technology</p>
-      <div class="social-links">
-        <a href="https://github.com" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
-        <a href="https://x.com" target="_blank"><img src="images/x-icon.png" alt="X"></a>
-        <a href="https://neuralink.com" target="_blank"><img src="images/neuralink-icon.png" alt="Neuralink"></a>
-      </div>
       <div class="social-media">
         <a href="https://linkedin.com" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
         <a href="https://github.com" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
+        <a href="https://x.com" target="_blank"><img src="images/x-icon.png" alt="X"></a>
         <a href="https://discord.com" target="_blank"><img src="images/discord-icon.png" alt="Discord"></a>
         <a href="https://youtube.com" target="_blank"><img src="images/youtube-icon.png" alt="YouTube"></a>
+        <a href="https://neuralink.com" target="_blank"><img src="images/neuralink-icon.png" alt="Neuralink"></a>
       </div>
     </div>
   </footer>

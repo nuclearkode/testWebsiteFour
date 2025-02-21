@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Existing Number Counter Animation (Retained)
+    // Fade-in effect
+    document.body.classList.add('loaded');
+
+    // Number Counter Animation
     const counters = document.querySelectorAll('.number');
     counters.forEach(counter => {
         const updateCount = () => {
@@ -7,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const count = +counter.innerText;
             const speed = 200;
             const increment = target / speed;
-
             if (count < target) {
                 counter.innerText = Math.ceil(count + increment);
                 setTimeout(updateCount, 20);
@@ -18,34 +20,72 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCount();
     });
 
-    // Existing Project Card Hover Effects (Retained)
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            card.style.setProperty('--mouse-x', `${x}px`);
-            card.style.setProperty('--mouse-y', `${y}px`);
-        });
-
-        card.querySelector('.project-link')?.addEventListener('click', (e) => {
+    // Project Modal Functionality
+    const projectLinks = document.querySelectorAll('.project-link');
+    projectLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
             e.preventDefault();
-            alert('Project details coming soon!');
+            const projectId = link.getAttribute('data-project');
+            const modal = document.getElementById(`${projectId}Modal`);
+            if (modal) {
+                modal.style.display = 'block';
+            }
         });
     });
 
-    // Existing Contact Form Submission (Retained)
+    document.querySelectorAll('.close-modal').forEach(button => {
+        button.addEventListener('click', () => {
+            button.parentElement.style.display = 'none';
+        });
+    });
+
+    // Contact Form Submission with Validation
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Message sent successfully! We’ll get back to you soon.');
-            contactForm.reset();
+            const email = document.getElementById('contactEmail').value;
+            if (!validateEmail(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    alert('Message sent successfully!');
+                    contactForm.reset();
+                } else {
+                    alert('There was an error sending your message.');
+                }
+            });
         });
     }
 
-    // Existing Dynamic Star Field (Retained)
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+
+    // Project Filtering
+    const filterButtons = document.querySelectorAll('.project-filters button');
+    const projectCards = document.querySelectorAll('.project-card');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.getAttribute('data-filter');
+            projectCards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Dynamic Star Field
     const starsContainer = document.querySelector('.stars');
     if (starsContainer) {
         for (let i = 0; i < 100; i++) {
@@ -62,11 +102,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // New: Create Particles for Home Page
+    // Create Particles (Reduced count)
     function createParticles() {
         const particlesContainer = document.querySelector('.particles');
         if (particlesContainer && document.body.classList.contains('home')) {
-            for (let i = 0; i < 30; i++) { // Limited for performance
+            for (let i = 0; i < 15; i++) { // Reduced from 30
                 const particle = document.createElement('div');
                 particle.classList.add('particle');
                 particle.style.left = `${Math.random() * 100}vw`;
@@ -79,18 +119,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     createParticles();
 
-    // New: Randomize Moving Objects Spawn on Home Page
+    // Randomize Moving Objects Spawn
     if (document.body.classList.contains('home')) {
-        const movingObjectsContainer = document.querySelector('.moving-objects');
-        if (movingObjectsContainer) {
-            const objects = movingObjectsContainer.querySelectorAll('img');
-            objects.forEach(object => {
-                object.style.animationDelay = `${Math.random() * 5}s`;
-            });
-        }
+        const objects = document.querySelectorAll('.moving-objects img');
+        objects.forEach(object => {
+            object.style.animationDelay = `${Math.random() * 5}s`;
+        });
     }
 
-    // New: AI Bot Chat Modal for About Page
+    // AI Bot Chat Modal with Predefined Responses
     if (document.body.classList.contains('about')) {
         const aiBot = document.getElementById('aiBot');
         const chatModal = document.getElementById('chatModal');
@@ -108,18 +145,30 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             chatForm.addEventListener('submit', (e) => {
                 e.preventDefault();
-                const question = chatInput.value.trim();
-                if (question) {
-                    const response = `AI: I'm here to help with questions about Quantum Portfolio's innovations, projects, and vision. You asked: "${question}" – How can I assist further?`;
-                    const responseDiv = document.createElement('div');
-                    responseDiv.textContent = response;
-                    responseDiv.style.color = '#00ffcc';
-                    responseDiv.style.marginTop = '10px';
-                    chatResponses.appendChild(responseDiv);
-                    chatInput.value = '';
-                    chatResponses.scrollTop = chatResponses.scrollHeight; // Auto-scroll to latest response
+                const question = chatInput.value.toLowerCase().trim();
+                let response;
+                if (question.includes('project')) {
+                    response = 'AI: Our projects include Mars Rover AI, Quantum Encryption, and Hyperloop Control. Which one interests you?';
+                } else if (question.includes('contact')) {
+                    response = 'AI: Contact us via the form on the Contact page or email info@quantumportfolio.com.';
+                } else {
+                    response = 'AI: I\'m here to assist with Quantum Portfolio queries. What would you like to know?';
                 }
+                const responseDiv = document.createElement('div');
+                responseDiv.textContent = response;
+                responseDiv.style.color = '#00ffcc';
+                responseDiv.style.marginTop = '10px';
+                chatResponses.appendChild(responseDiv);
+                chatInput.value = '';
+                chatResponses.scrollTop = chatResponses.scrollHeight;
             });
         }
     }
+
+    // Responsive Menu
+    const hamburger = document.querySelector('.hamburger');
+    const navUl = document.querySelector('nav ul');
+    hamburger.addEventListener('click', () => {
+        navUl.classList.toggle('show');
+    });
 });
