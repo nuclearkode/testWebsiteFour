@@ -79,6 +79,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     createParticles();
 
+    // New: Randomize Moving Objects Spawn on Home Page
+    if (document.body.classList.contains('home')) {
+        const movingObjectsContainer = document.querySelector('.moving-objects');
+        if (movingObjectsContainer) {
+            const objects = movingObjectsContainer.querySelectorAll('img');
+            objects.forEach(object => {
+                object.style.animationDelay = `${Math.random() * 5}s`;
+            });
+        }
+    }
+
     // New: AI Bot Chat Modal for About Page
     if (document.body.classList.contains('about')) {
         const aiBot = document.getElementById('aiBot');

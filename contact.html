@@ -1,67 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantum Portfolio | Contact</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantum Portfolio | Contact</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 <body class="contact">
-    <!-- Existing Cosmic Background Effects (Retained) -->
-    <div class="stars"></div>
-    <div class="nebula"></div>
-    
-    <!-- Existing Header (Retained) -->
-    <header class="holo-header">
-        <nav class="nav-grid">
-            <div class="logo">Quantum Portfolio</div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Existing Main Content (Retained) -->
-    <main>
-        <section class="contact">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-form">
-                <form id="contactForm">
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-            <div class="contact-info">
-                <p>Email: info@quantumportfolio.com</p>
-                <p>Phone: +1-555-QUANTUM</p>
-            </div>
-        </section>
-    </main>
-
-    <!-- Updated Footer with Social Media Icons (Retained and Enhanced) -->
-    <footer>
-        <div class="footer-content">
-            <p>© 2025 Quantum Portfolio | Powered by xAI Technology</p>
-            <div class="social-links">
-                <a href="https://github.com" target="_blank">GitHub</a>
-                <a href="https://x.com" target="_blank">X</a>
-                <a href="https://neuralink.com" target="_blank">Neuralink</a>
-            </div>
-            <div class="social-media">
-                <a href="https://linkedin.com" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
-                <a href="https://github.com" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
-                <a href="https://discord.com" target="_blank"><img src="images/discord-icon.png" alt="Discord"></a>
-                <a href="https://youtube.com" target="_blank"><img src="images/youtube-icon.png" alt="YouTube"></a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <!-- Cosmic Background Effects -->
+  <div class="stars"></div>
+  <div class="nebula"></div>
+  
+  <!-- Header -->
+  <header class="holo-header">
+    <nav class="nav-grid" aria-label="Main Navigation">
+      <div class="logo">Quantum Portfolio</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Main Content -->
+  <main>
+    <section class="contact">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-form">
+        <form id="contactForm">
+          <label for="contactName">Name</label>
+          <input type="text" id="contactName" placeholder="Name" required aria-required="true">
+          
+          <label for="contactEmail">Email</label>
+          <input type="email" id="contactEmail" placeholder="Email" required aria-required="true">
+          
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" placeholder="Message" required aria-required="true"></textarea>
+          
+          <!-- Optional: reCAPTCHA integration -->
+          <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+          
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+      <div class="contact-info">
+        <p>Email: info@quantumportfolio.com</p>
+        <p>Phone: +1-555-QUANTUM</p>
+        <!-- Optional Map Integration -->
+        <iframe src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED_CODE" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Quantum Portfolio | Powered by xAI Technology</p>
+      <div class="social-links">
+        <a href="https://github.com" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
+        <a href="https://x.com" target="_blank"><img src="images/x-icon.png" alt="X"></a>
+        <a href="https://neuralink.com" target="_blank"><img src="images/neuralink-icon.png" alt="Neuralink"></a>
+      </div>
+      <div class="social-media">
+        <a href="https://linkedin.com" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+        <a href="https://github.com" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
+        <a href="https://discord.com" target="_blank"><img src="images/discord-icon.png" alt="Discord"></a>
+        <a href="https://youtube.com" target="_blank"><img src="images/youtube-icon.png" alt="YouTube"></a>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Include reCAPTCHA script -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
