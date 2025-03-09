@@ -3,181 +3,289 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore Quantum Portfolio's projects in AI, quantum computing, space technology, agriculture, and vehicles.">
   <title>Quantum Portfolio | Projects</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
-<body class="projects">
-  <!-- Cosmic Background Effects -->
-  <div class="stars"></div>
-  <div class="nebula"></div>
-  
-  <!-- Header -->
+<body>
   <header class="holo-header">
-    <nav class="nav-grid" aria-label="Main Navigation">
+    <nav class="nav-grid">
       <div class="logo">Quantum Portfolio</div>
-      <div class="hamburger" aria-label="Menu Toggle">☰</div>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html" class="active" aria-current="page">Projects</a></li>
+        <li><a href="projects.html">Projects</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
-  
-  <!-- Main Content -->
+
   <main>
+    <!-- Neural Network Section -->
     <section class="projects">
-      <h2 class="section-title">Our Innovative Projects</h2>
-      <div class="project-filters">
-        <button data-filter="all">All</button>
-        <button data-filter="ai">AI</button>
-        <button data-filter="security">Security</button>
-        <button data-filter="transport">Transport</button>
-        <button data-filter="agriculture">Agriculture</button>
-        <button data-filter="vehicle">Vehicle</button>
-      </div>
+	  <p>&nbsp;</p>
+	  <p>&nbsp;</p>
+      <h2 class="section-title">Neural Network</h2>
       <div class="project-grid">
-        <!-- AI Projects -->
-        <div class="project-card" data-category="ai">
-          <img src="images/project1.jpg" class="project-image" alt="Mars Rover AI" loading="lazy" onerror="this.src='images/placeholder.jpg';">
+        <div class="project-card">
+          <img src="images/project1.PNG" class="project-image" alt="Mars Rover AI" loading="lazy">
           <div class="card-inner">
             <h3>Mars Rover AI</h3>
             <p>Autonomous navigation system for extraterrestrial exploration</p>
-            <a href="#" class="project-link" data-project="marsRover">Learn More</a>
+            <a href="projects/mars-rover-ai.html" class="project-link">Learn More</a>
           </div>
         </div>
-        <div class="project-card" data-category="ai">
-          <img src="images/project4.jpg" class="project-image" alt="AI Weather Prediction" loading="lazy" onerror="this.src='images/placeholder.jpg';">
-          <div class="card-inner">
-            <h3>AI Weather Prediction</h3>
-            <p>Advanced AI model for predicting weather patterns on Mars</p>
-            <a href="#" class="project-link" data-project="aiWeather">Learn More</a>
-          </div>
-        </div>
-
-        <!-- Security Projects -->
-        <div class="project-card" data-category="security">
-          <img src="images/project2.jpg" class="project-image" alt="Quantum Encryption" loading="lazy" onerror="this.src='images/placeholder.jpg';">
+        <div class="project-card">
+          <img src="images/project2.PNG" class="project-image" alt="Quantum Encryption" loading="lazy">
           <div class="card-inner">
             <h3>Quantum Encryption</h3>
             <p>Unbreakable security for interplanetary communication</p>
-            <a href="#" class="project-link" data-project="quantumEncryption">Learn More</a>
+            <a href="projects/quantum-encryption.html" class="project-link">Learn More</a>
           </div>
         </div>
-        <div class="project-card" data-category="security">
-          <img src="images/project5.jpg" class="project-image" alt="Cybersecurity AI" loading="lazy" onerror="this.src='images/placeholder.jpg';">
-          <div class="card-inner">
-            <h3>Cybersecurity AI</h3>
-            <p>AI-driven threat detection for space missions</p>
-            <a href="#" class="project-link" data-project="cybersecurityAI">Learn More</a>
-          </div>
-        </div>
-
-        <!-- Transport Projects -->
-        <div class="project-card" data-category="transport">
-          <img src="images/project3.jpg" class="project-image" alt="Hyperloop Control" loading="lazy" onerror="this.src='images/placeholder.jpg';">
+        <div class="project-card">
+          <img src="images/project3.PNG" class="project-image" alt="Hyperloop Control" loading="lazy">
           <div class="card-inner">
             <h3>Hyperloop Control</h3>
             <p>AI-driven transportation optimization system</p>
-            <a href="#" class="project-link" data-project="hyperloopControl">Learn More</a>
+            <a href="projects/hyperloop-control.html" class="project-link">Learn More</a>
           </div>
         </div>
-        <div class="project-card" data-category="transport">
-          <img src="images/project6.jpg" class="project-image" alt="Space Elevator" loading="lazy" onerror="this.src='images/placeholder.jpg';">
+        <div class="project-card">
+          <img src="images/project10.PNG" class="project-image" alt="Neural Traffic Optimizer" loading="lazy">
           <div class="card-inner">
-            <h3>Space Elevator</h3>
-            <p>Quantum-engineered transport system for space access</p>
-            <a href="#" class="project-link" data-project="spaceElevator">Learn More</a>
+            <h3>Neural Traffic Optimizer</h3>
+            <p>AI system for real-time urban traffic management</p>
+            <a href="projects/neural-traffic-optimizer.html" class="project-link">Learn More</a>
           </div>
         </div>
+        <!-- Additional Neural Network Projects -->
+        <div class="project-card">
+          <img src="images/project12.PNG" class="project-image" alt="Deep Space Analysis" loading="lazy">
+          <div class="card-inner">
+            <h3>Deep Space Analysis</h3>
+            <p>Advanced neural network for analyzing astronomical data</p>
+            <a href="projects/deep-space-analysis.html" class="project-link">Learn More</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/project13.PNG" class="project-image" alt="Adaptive Neural Architect" loading="lazy">
+          <div class="card-inner">
+            <h3>Adaptive Neural Architect</h3>
+            <p>Dynamic AI framework for evolving neural network structures</p>
+            <a href="projects/adaptive-neural-architect.html" class="project-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Agriculture Projects -->
-        <div class="project-card" data-category="agriculture">
-          <img src="images/project7.jpg" class="project-image" alt="Martian Farming" loading="lazy" onerror="this.src='images/placeholder.jpg';">
+    <!-- Software Section -->
+    <section class="projects">
+      <h2 class="section-title">Software</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="images/project4.PNG" class="project-image" alt="Custom PLC and System" loading="lazy">
           <div class="card-inner">
-            <h3>Martian Farming</h3>
-            <p>Sustainable agriculture solutions for Mars colonization</p>
-            <a href="#" class="project-link" data-project="martianFarming">Learn More</a>
+            <h3>Custom PLC and System</h3>
+            <p>A custom programmable logic controller for industrial automation</p>
+            <a href="projects/custom-plc.html" class="project-link">Learn More</a>
           </div>
         </div>
+        <div class="project-card">
+          <img src="images/project5.PNG" class="project-image" alt="Logic Circuit Generator" loading="lazy">
+          <div class="card-inner">
+            <h3>Logic Circuit Generator</h3>
+            <p>A tool to generate and simulate logic circuits</p>
+            <a href="projects/logic-circuit-generator.html" class="project-link">Learn More</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/project6.PNG" class="project-image" alt="Autonomous Small Scale Car" loading="lazy">
+          <div class="card-inner">
+            <h3>Autonomous Small Scale Car</h3>
+            <p>A small-scale autonomous vehicle for testing AI algorithms</p>
+            <a href="projects/autonomous-car.html" class="project-link">Learn More</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/project11.PNG" class="project-image" alt="Virtual Reality Simulator" loading="lazy">
+          <div class="card-inner">
+            <h3>Virtual Reality Simulator</h3>
+            <p>VR platform for training and simulations</p>
+            <a href="projects/vr-simulator.html" class="project-link">Learn More</a>
+          </div>
+        </div>
+        <!-- Additional Software Projects -->
+        <div class="project-card">
+          <img src="images/project14.PNG" class="project-image" alt="Cloud Automation Suite" loading="lazy">
+          <div class="card-inner">
+            <h3>Cloud Automation Suite</h3>
+            <p>A comprehensive platform for automating cloud deployments</p>
+            <a href="projects/cloud-automation-suite.html" class="project-link">Learn More</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/project15.PNG" class="project-image" alt="Mobile App Framework" loading="lazy">
+          <div class="card-inner">
+            <h3>Mobile App Framework</h3>
+            <p>An extensible framework for building cross-platform mobile apps</p>
+            <a href="projects/mobile-app-framework.html" class="project-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Vehicle Projects -->
-        <div class="project-card" data-category="vehicle">
-          <img src="images/project8.jpg" class="project-image" alt="Lunar Rover" loading="lazy" onerror="this.src='images/placeholder.jpg';">
+    <!-- Agriculture Section -->
+    <section class="projects">
+      <h2 class="section-title">Agriculture</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="images/project7.PNG" class="project-image" alt="Smart Irrigation System" loading="lazy">
           <div class="card-inner">
-            <h3>Lunar Rover</h3>
-            <p>Autonomous vehicle for lunar exploration</p>
-            <a href="#" class="project-link" data-project="lunarRover">Learn More</a>
+            <h3>Smart Irrigation System</h3>
+            <p>AI-powered irrigation for optimized water usage</p>
+            <a href="projects/smart-irrigation.html" class="project-link">Learn More</a>
           </div>
         </div>
-        <div class="project-card" data-category="vehicle">
-          <img src="images/project9.jpg" class="project-image" alt="Aerial Drone Network" loading="lazy" onerror="this.src='images/placeholder.jpg';">
+        <div class="project-card">
+          <img src="images/project8.PNG" class="project-image" alt="Crop Disease Detection" loading="lazy">
           <div class="card-inner">
-            <h3>Aerial Drone Network</h3>
-            <p>Drone-based logistics for planetary surfaces</p>
-            <a href="#" class="project-link" data-project="droneNetwork">Learn More</a>
+            <h3>Crop Disease Detection</h3>
+            <p>Machine learning model to detect crop diseases early</p>
+            <a href="projects/crop-disease-detection.html" class="project-link">Learn More</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/project9.PNG" class="project-image" alt="Autonomous Farming Drone" loading="lazy">
+          <div class="card-inner">
+            <h3>Autonomous Farming Drone</h3>
+            <p>Drone for monitoring and managing large-scale farms</p>
+            <a href="projects/farming-drone.html" class="project-link">Learn More</a>
+          </div>
+        </div>
+        <!-- Additional Agriculture Project -->
+        <div class="project-card">
+          <img src="images/project16.PNG" class="project-image" alt="Precision Harvesting Robot" loading="lazy">
+          <div class="card-inner">
+            <h3>Precision Harvesting Robot</h3>
+            <p>Robotics system designed for efficient and precise crop harvesting</p>
+            <a href="projects/harvesting-robot.html" class="project-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Healthcare Section -->
+    <section class="projects">
+      <h2 class="section-title">Healthcare</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="images/project17.PNG" class="project-image" alt="AI-Assisted Diagnostics" loading="lazy">
+          <div class="card-inner">
+            <h3>AI-Assisted Diagnostics</h3>
+            <p>Machine learning tool for early disease detection</p>
+            <a href="projects/ai-diagnostics.html" class="project-link">Learn More</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/project18.PNG" class="project-image" alt="Smart Wearable Monitor" loading="lazy">
+          <div class="card-inner">
+            <h3>Smart Wearable Monitor</h3>
+            <p>Real-time health monitoring through wearable devices</p>
+            <a href="projects/wearable-monitor.html" class="project-link">Learn More</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/project19.PNG" class="project-image" alt="Telemedicine Platform" loading="lazy">
+          <div class="card-inner">
+            <h3>Telemedicine Platform</h3>
+            <p>Remote patient consultation and monitoring system</p>
+            <a href="projects/telemedicine-platform.html" class="project-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Energy Section -->
+    <section class="projects">
+      <h2 class="section-title">Energy</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="images/project20.PNG" class="project-image" alt="Renewable Energy Grid Management" loading="lazy">
+          <div class="card-inner">
+            <h3>Renewable Energy Grid Management</h3>
+            <p>Optimizing grid operations for renewable energy sources</p>
+            <a href="projects/energy-grid-management.html" class="project-link">Learn More</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/project21.PNG" class="project-image" alt="Smart Grid Optimization System" loading="lazy">
+          <div class="card-inner">
+            <h3>Smart Grid Optimization System</h3>
+            <p>AI-powered solution to balance energy distribution</p>
+            <a href="projects/smart-grid.html" class="project-link">Learn More</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/project22.PNG" class="project-image" alt="Solar Panel Efficiency Analyzer" loading="lazy">
+          <div class="card-inner">
+            <h3>Solar Panel Efficiency Analyzer</h3>
+            <p>Predictive analytics for improving solar panel performance</p>
+            <a href="projects/solar-efficiency.html" class="project-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transportation Section -->
+    <section class="projects">
+      <h2 class="section-title">Transportation</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="images/project23.PNG" class="project-image" alt="Autonomous Drone Delivery" loading="lazy">
+          <div class="card-inner">
+            <h3>Autonomous Drone Delivery</h3>
+            <p>Drone-based delivery system for urban logistics</p>
+            <a href="projects/drone-delivery.html" class="project-link">Learn More</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/project24.PNG" class="project-image" alt="Urban Mobility Platform" loading="lazy">
+          <div class="card-inner">
+            <h3>Urban Mobility Platform</h3>
+            <p>Integrated app for managing urban transportation networks</p>
+            <a href="projects/urban-mobility.html" class="project-link">Learn More</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/project25.PNG" class="project-image" alt="Smart Parking Solution" loading="lazy">
+          <div class="card-inner">
+            <h3>Smart Parking Solution</h3>
+            <p>AI-driven system for efficient parking management</p>
+            <a href="projects/smart-parking.html" class="project-link">Learn More</a>
           </div>
         </div>
       </div>
     </section>
   </main>
-  
-  <!-- Project Modals -->
-  <div class="project-modal" id="marsRoverModal">
-    <h3>Mars Rover AI</h3>
-    <p>An autonomous navigation system designed for Mars rovers, utilizing advanced AI to analyze terrain and optimize routes in real-time.</p>
-    <button class="close-modal">Close</button>
-  </div>
-  <div class="project-modal" id="aiWeatherModal">
-    <h3>AI Weather Prediction</h3>
-    <p>Advanced AI model for predicting weather patterns on Mars, improving mission planning and safety.</p>
-    <button class="close-modal">Close</button>
-  </div>
-  <div class="project-modal" id="quantumEncryptionModal">
-    <h3>Quantum Encryption</h3>
-    <p>A quantum-based encryption protocol ensuring secure communication across interplanetary distances, resistant to all known decryption methods.</p>
-    <button class="close-modal">Close</button>
-  </div>
-  <div class="project-modal" id="cybersecurityAIModal">
-    <h3>Cybersecurity AI</h3>
-    <p>AI-driven threat detection for space missions, protecting critical systems from cyber attacks.</p>
-    <button class="close-modal">Close</button>
-  </div>
-  <div class="project-modal" id="hyperloopControlModal">
-    <h3>Hyperloop Control</h3>
-    <p>An AI-driven system for managing Hyperloop transportation, optimizing speed, safety, and energy efficiency through real-time data analysis.</p>
-    <button class="close-modal">Close</button>
-  </div>
-  <div class="project-modal" id="spaceElevatorModal">
-    <h3>Space Elevator</h3>
-    <p>Quantum-engineered transport system for efficient and cost-effective access to space, leveraging advanced materials and AI control.</p>
-    <button class="close-modal">Close</button>
-  </div>
-  <div class="project-modal" id="martianFarmingModal">
-    <h3>Martian Farming</h3>
-    <p>Sustainable agriculture solutions for Mars colonization, using hydroponics and AI to grow food in harsh environments.</p>
-    <button class="close-modal">Close</button>
-  </div>
-  <div class="project-modal" id="lunarRoverModal">
-    <h3>Lunar Rover</h3>
-    <p>Autonomous vehicle for lunar exploration, equipped with advanced sensors and AI for navigation and sample collection.</p>
-    <button class="close-modal">Close</button>
-  </div>
-  <div class="project-modal" id="droneNetworkModal">
-    <h3>Aerial Drone Network</h3>
-    <p>Drone-based logistics for planetary surfaces, enabling efficient transport and monitoring using AI coordination.</p>
-    <button class="close-modal">Close</button>
-  </div>
-  
-  <!-- Footer -->
+
   <footer>
     <div class="footer-content">
-      <p>© 2025 Quantum Portfolio | Powered by xAI Technology</p>
+      <p>© 2025 Quantum Portfolio | Powered by Humans</p>
+      <div class="social-links">
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a href="https://x.com/yourusername" target="_blank">X</a>
+        <a href="https://neuralink.com" target="_blank">Neuralink</a>
+      </div>
       <div class="social-media">
-        <a href="https://linkedin.com" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn" onerror="this.style.display='none';"></a>
-        <a href="https://github.com" target="_blank"><img src="images/github-icon.png" alt="GitHub" onerror="this.style.display='none';"></a>
-        <a href="https://x.com" target="_blank"><img src="images/x-icon.png" alt="X" onerror="this.style.display='none';"></a>
-        <a href="https://discord.com" target="
+        <a href="https://linkedin.com/in/yourusername" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn" loading="lazy"></a>
+        <a href="https://github.com/yourusername" target="_blank"><img src="images/github-icon.png" alt="GitHub" loading="lazy"></a>
+        <a href="https://discord.com" target="_blank"><img src="images/discord-icon.png" alt="Discord" loading="lazy"></a>
+        <a href="https://youtube.com" target="_blank"><img src="images/youtube-icon.png" alt="YouTube" loading="lazy"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
